@@ -23,7 +23,7 @@ The current Web Explorer displays a prepared neuron model. Browser-based SWC upl
 
 **MorphoScope Web Explorer**
 
-https://cvillanue.github.io/neurovis-web-explorer/
+https://cvillanue.github.io/MorphoScope-3D/
 
 ---
 
