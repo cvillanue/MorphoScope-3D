@@ -5,7 +5,7 @@
 
 MorphoScope is a software created for reconstructing, animating, and interactively exploring neuronal morphology from SWC reconstructions.
 
-Built with Python, Blender, and Three.js, NeuroVis combines a procedural three-dimensional reconstruction pipeline with a browser-based visualization environment. The project is intended to support exploratory analysis of neuronal structure.
+Built with Python, Blender, and Three.js, MorphoScope combines a procedural three-dimensional reconstruction pipeline with a browser-based visualization environment. The project is intended to support exploratory analysis of neuronal structure.
 
 MorphoScope currently consists of two integrated components:
 
