@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: "/neurovis-web-explorer/"
-});
+  base: '/MorphoScope-3D/',
+})
