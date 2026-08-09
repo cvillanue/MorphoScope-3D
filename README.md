@@ -1,17 +1,18 @@
-# NeuroVis v1.1
+# MorphoScope - NeuroViz Exploration
+*renamed project :)
 
 ## Interactive Visualization of Neuronal Morphology and Simulated Signal Propagation
 
-NeuroVis is a software created for reconstructing, animating, and interactively exploring neuronal morphology from SWC reconstructions.
+MorphoScope is a software created for reconstructing, animating, and interactively exploring neuronal morphology from SWC reconstructions.
 
 Built with Python, Blender, and Three.js, NeuroVis combines a procedural three-dimensional reconstruction pipeline with a browser-based visualization environment. The project is intended to support exploratory analysis of neuronal structure.
 
-NeuroVis currently consists of two integrated components:
+MorphoScope currently consists of two integrated components:
 
-- **NeuroVis Blender Pipeline**  
+- **MorphoScope Blender Pipeline**  
   Parses SWC morphology, generates three-dimensional neuron geometry, computes structural statistics, creates simulated signal-propagation animations, and exports browser-compatible GLB models.
 
-- **NeuroVis Web Explorer**  
+- **MorphoScope Web Explorer**  
   Loads exported GLB models into an interactive Three.js scene, allowing users to rotate, zoom, pan, and inspect neuronal reconstructions directly in a web browser.
 
 The current Web Explorer displays a prepared neuron model. Browser-based SWC upload and reconstruction are planned features and are not yet implemented.
@@ -20,7 +21,7 @@ The current Web Explorer displays a prepared neuron model. Browser-based SWC upl
 
 # Live Demo
 
-**NeuroVis Web Explorer**
+**MorphoScope Web Explorer**
 
 https://cvillanue.github.io/neurovis-web-explorer/
 
@@ -39,7 +40,7 @@ This architecture separates morphology processing, three-dimensional authoring, 
 
 # Current Features
 
-NeuroVis v1.1 currently supports:
+MorphoScope v1.1 currently supports:
 
 - Parsing neuronal reconstructions from SWC files
 - Preserving SWC node and parent-child relationships
@@ -66,7 +67,7 @@ The following features are not currently available:
 
 # Development Process
 
-Developing NeuroVis required integrating several independent technologies into a unified visualization pipeline.
+Developing MorphoScope required integrating several independent technologies into a unified visualization pipeline.
 
 The overall workflow consists of five principal stages.
 
@@ -88,7 +89,7 @@ parent_id
 
 The parser converts these rows into an internal morphology representation.
 
-For each node, NeuroVis stores:
+For each node, MorphoScope stores:
 
 - A unique node identifier
 - Anatomical classification
@@ -120,7 +121,7 @@ NeuroVis must determine which pairs of nodes should be connected and preserve th
 
 ## 2. Geometry Generation
 
-After parsing, NeuroVis converts the morphology graph into Blender geometry.
+After parsing, MorphoScope converts the morphology graph into Blender geometry.
 
 Each parent-child connection becomes a neuronal segment. These segments are represented using Blender curve objects rather than manually constructed meshes.
 
@@ -177,7 +178,7 @@ These objects are placed using the same coordinate system as the neuronal branch
 
 ### Blender scene organization
 
-Generated objects are placed inside a dedicated NeuroVis collection.
+Generated objects are placed inside a dedicated MorphoScope collection.
 
 A typical scene contains:
 
@@ -217,13 +218,13 @@ The animation timeline allows the user to:
 <img width="1495" height="734" alt="Screenshot 2026-08-04 at 5 52 50 PM" src="https://github.com/user-attachments/assets/ed721ded-65cf-4f04-96ea-bd11f1dc1e05" />
 
 
-> NeuroVis reconstruction displayed in Blender. Individual neuronal branches are represented as procedural curve objects, with branch-specific materials and animated signal markers.
+> MorphoScope reconstruction displayed in Blender. Individual neuronal branches are represented as procedural curve objects, with branch-specific materials and animated signal markers.
 
 ---
 
 ## 3. Morphological Analysis
 
-NeuroVis computes structural statistics directly from the parsed morphology. These measurements summarize the complexity and extent of the reconstruction.
+MorphoScope computes structural statistics directly from the parsed morphology. These measurements summarize the complexity and extent of the reconstruction.
 Current measurements include:
 
 ### Node count
@@ -290,7 +291,7 @@ Maximum branch order
 
 ## 4. Spike Propagation Animation
 
-NeuroVis creates a visual simulation of neural signal propagation. This animation does not solve the Hodgkin-Huxley equations and does not attempt to reproduce membrane voltage dynamics.
+MorphoScope creates a visual simulation of neural signal propagation. This animation does not solve the Hodgkin-Huxley equations and does not attempt to reproduce membrane voltage dynamics.
 Instead, it uses the neuron graph to create an intuitive temporal visualization of activity moving through the neuronal arbor.
 
 ### Propagation sequence
@@ -308,7 +309,7 @@ A full electrophysiological simulation requires membrane properties, channel con
 
 Those values are not contained in a standard SWC file.
 
-NeuroVis therefore separates:
+MorphoScope therefore separates:
 
 - **Morphology-based visualization**
 - **Biophysical simulation**
@@ -375,7 +376,7 @@ Only objects intended for the final visualization should be included in the GLB.
 
 ---
 
-# NeuroVis Web Explorer
+# MorphoScope Web Explorer
 
 The Web Explorer is a Vite and Three.js application that loads the exported neuron model. Its current role is to provide a portable and interactive browser viewer.
 <img width="824" height="695" alt="NeuronModel_Browser" src="https://github.com/user-attachments/assets/d874285a-2e0d-4de5-94cf-f052c324d2f5" />
@@ -437,7 +438,7 @@ The development process involved several practical challenges.
 
 ## Blender module organization
 
-The NeuroVis pipeline was separated into focused Python modules, including:
+The MorphoScope pipeline was separated into focused Python modules, including:
 
 ```text
 animation.py
@@ -619,7 +620,7 @@ The following capabilities are planned but are not currently implemented:
 
 # Status
 
-NeuroVis v1.1 is an active prototype. The current release demonstrates the full pipeline from SWC morphology to an interactive browser visualization:
+MorphoScope v1.1 is an active prototype. The current release demonstrates the full pipeline from SWC morphology to an interactive browser visualization:
 
 ```text
 SWC
